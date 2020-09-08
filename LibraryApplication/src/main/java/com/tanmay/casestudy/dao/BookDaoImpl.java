@@ -2,18 +2,25 @@ package com.tanmay.casestudy.dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.tanmay.casestudy.model.Book;
 import com.tanmay.casestudy.model.BookMapper;
 
+@Component
+//or
+//@Repository
 public class BookDaoImpl implements BookDao {
 
+	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+//	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//		this.jdbcTemplate = jdbcTemplate;
+//	}
 
 	
 	public int addBook(Book b) {

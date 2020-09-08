@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="<c:url value="/resources/js/jquery.1.10.2.min.js" />"></script>
     <script src="<c:url value="/resources/js/main.js" />"></script>
 <meta charset="ISO-8859-1">
 <title>Add Book</title>

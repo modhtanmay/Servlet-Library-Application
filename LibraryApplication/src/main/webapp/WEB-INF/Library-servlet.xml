@@ -21,10 +21,12 @@
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
+	
+	<!--  WE can uncomment below file to do setter injection on JdbcTemplate Class -->
 
-	<bean id="dao" class="com.tanmay.casestudy.dao.BookDaoImpl">
+	<!-- <bean id="dao" class="com.tanmay.casestudy.dao.BookDaoImpl">
 		<property name="jdbcTemplate" ref="jt"></property>
-	</bean>
+	</bean> -->
  
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -32,9 +34,11 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<!--  WE can uncomment below file Configures a handler for serving static resources 
+									such as images, js, and, css files -->
 	
-	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
-    <mvc:annotation-driven />
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
+    <mvc:annotation-driven /> -->
 
 
 </beans>
